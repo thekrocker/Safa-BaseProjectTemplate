@@ -6,5 +6,10 @@
         {
             return StateFactory.MoveState;
         }
+
+        protected override void SetReferences()
+        {
+            
+        }
     }
 }

@@ -1,12 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using _Project.Scripts.Utils.FSM;
-using UnityEngine;
 
 public abstract class BaseState
 {
-    protected BaseStateMachine Ctx;
-    protected StateFactory Factory;
+    protected readonly BaseStateMachine Ctx;
+    protected readonly StateFactory Factory;
 
     public BaseState(BaseStateMachine context, StateFactory factory)
     {

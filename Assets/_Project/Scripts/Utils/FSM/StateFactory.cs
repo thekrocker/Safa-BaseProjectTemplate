@@ -2,15 +2,18 @@
 {
     public class StateFactory
     {
-        private readonly BaseStateMachine _ctx;
+        #region States
 
         public MoveState MoveState;
         public IdleState IdleState;
 
+        #endregion
+
+        private readonly BaseStateMachine _ctx;
         public StateFactory(BaseStateMachine ctx)
         {
             _ctx = ctx;
-
+            
             SetStates();
         }
 

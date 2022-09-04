@@ -10,21 +10,28 @@ public abstract class BaseStateMachine : MonoBehaviour
     public virtual void Awake()
     {
         StateFactory = new StateFactory(this);
+
+        SetReferences();
     }
 
     private void Start()
     {
-        CurrentState = GetInitialState();
-        CurrentState.Enter();
+        SetInitialState();
     }
 
     private void Update()
     {
-        CurrentState.Update();
+        CurrentState?.Update();
     }
 
-    public virtual BaseState GetInitialState()
+
+    private void SetInitialState()
     {
-        return null;
+        CurrentState = GetInitialState();
+        CurrentState?.Enter();
     }
+
+
+    public virtual BaseState GetInitialState() => null;
+    protected abstract void SetReferences();
 }

@@ -2,14 +2,16 @@ using _Project.Scripts.Utils.FSM;
 
 public abstract class BaseState
 {
-    protected readonly BaseStateMachine Ctx;
-    protected readonly StateFactory Factory;
-
     public BaseState(BaseStateMachine context, StateFactory factory)
     {
         Ctx = context;
         Factory = factory;
     }
+
+
+    protected readonly BaseStateMachine Ctx;
+    protected readonly StateFactory Factory;
+
 
     public abstract void Enter();
     public abstract void Update();

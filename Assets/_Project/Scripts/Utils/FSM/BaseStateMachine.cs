@@ -10,7 +10,6 @@ public abstract class BaseStateMachine : MonoBehaviour
     public virtual void Awake()
     {
         StateFactory = new StateFactory(this);
-
         SetReferences();
     }
 
@@ -23,7 +22,6 @@ public abstract class BaseStateMachine : MonoBehaviour
     {
         CurrentState?.Update();
     }
-
 
     private void SetInitialState()
     {

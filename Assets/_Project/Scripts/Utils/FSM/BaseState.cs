@@ -8,14 +8,8 @@ public abstract class BaseState
         Factory = factory;
     }
 
-
     protected readonly BaseStateMachine Ctx;
     protected readonly StateFactory Factory;
-
-
-    public abstract void Enter();
-    public abstract void Update();
-    public abstract void Exit();
 
     protected void ChangeState(BaseState targetState)
     {
@@ -25,4 +19,8 @@ public abstract class BaseState
 
         Ctx.CurrentState = targetState;
     }
+
+    public abstract void Enter();
+    public abstract void Update();
+    public abstract void Exit();
 }

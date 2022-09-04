@@ -2,9 +2,12 @@
 {
     public class StateMachineSample : BaseStateMachine
     {
-        public override BaseState GetInitialState()
+        public override BaseState GetInitialState() => StateFactory.MoveState;
+
+        public override void Awake()
         {
-            return StateFactory.MoveState;
+            base.Awake();
+            
         }
 
         protected override void SetReferences()

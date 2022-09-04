@@ -105,7 +105,7 @@ public class MobileJoystick : MonoBehaviour, IPointerDownHandler, IDragHandler, 
 
     private void SetOuterJoystickPosition()
     {
-        outerJoystick.transform.position = Utils.GetMousePosition();
+        outerJoystick.transform.position = MouseUtils.GetMousePosition();
     }
 
     #endregion
